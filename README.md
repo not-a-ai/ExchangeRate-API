@@ -22,6 +22,7 @@ Ele foi projetado para ser executado no terminal e pode ser utilizado por desenv
 
 - Consultar a taxa de câmbio entre duas moedas.
 - Converter um valor de uma moeda para outra, utilizando a taxa de câmbio em tempo real.
+- Salvar histórico de conversão e exibi-lo no console.
   
 ## Instalação
 
