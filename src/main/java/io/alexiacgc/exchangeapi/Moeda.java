@@ -7,10 +7,21 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Map;
 
 public class Moeda {
+    public String pais;
     private Map<String, Double> conversion_rates;
+    public double valor;
+    public transient LocalDateTime data_de_conversao;
+    public String data_formatada;
+
+    public Moeda() {
+        this.data_de_conversao = LocalDateTime.now();
+        this.data_formatada = data_de_conversao.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
+    }
 
     public Moeda buscaMoeda(String pais) {
         Dotenv dotenv = Dotenv.load();
